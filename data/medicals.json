@@ -1,0 +1,26 @@
+[
+    {
+        "description": "Test koposeos",
+        "results": "Very nice man",
+        "remarks": "Next exams in 1 year.",
+        "id": 1,
+        "dateCreated": "2021-04-08T05:33:05.184Z",
+        "dateUpdated": "2022-06-06T07:08:22.478Z"
+    },
+    {
+        "description": "Γενική αίματος",
+        "results": "Very nice",
+        "remarks": "",
+        "id": 2,
+        "dateCreated": "2022-06-05T21:34:35.013Z",
+        "dateUpdated": "2022-06-05T21:35:04.365Z"
+    },
+    {
+        "description": "test",
+        "results": "Very nice man",
+        "remarks": "",
+        "id": 3,
+        "dateCreated": "2022-06-05T21:36:32.655Z",
+        "dateUpdated": "2022-06-05T21:36:32.655Z"
+    }
+]

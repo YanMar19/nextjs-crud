@@ -1,0 +1,24 @@
+[
+    {
+        "title": "Mr",
+        "firstName": "Frank",
+        "lastName": "Murphy1",
+        "email": "frank.murphy@rustvale.com",
+        "role": "User",
+        "password": "sue123",
+        "id": 1,
+        "dateCreated": "2021-04-08T05:33:05.184Z",
+        "dateUpdated": "2022-06-05T17:48:19.395Z"
+    },
+    {
+        "title": "Mr",
+        "firstName": "Γιαννης",
+        "lastName": "Μαριανος",
+        "email": "info@webproposal.eu",
+        "role": "Admin",
+        "password": "123456",
+        "id": 2,
+        "dateCreated": "2022-06-05T17:48:53.738Z",
+        "dateUpdated": "2022-06-05T17:49:06.974Z"
+    }
+]
