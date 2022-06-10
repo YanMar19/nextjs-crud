@@ -11,7 +11,7 @@ function handler(req, res) {
         default:
             return res.status(405).end(`Method ${req.method} Not Allowed`)
     }
-
+s
     function getUsers() {
         const users = usersRepo.getAll();
         return res.status(200).json(users);
