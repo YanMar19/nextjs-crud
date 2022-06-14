@@ -11,8 +11,11 @@ export const userService = {
 
 const baseUrl = `${apiUrl}/users`;
 
-function getAll() {
-    return fetchWrapper.get(baseUrl);
+async function getAll() {
+    // return fetchWrapper.get(baseUrl);
+    const res = await fetch(`${apiUrl}/users`);
+    const users = await res.json();
+    return users;
 }
 
 function getById(id) {
