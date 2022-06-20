@@ -46,12 +46,14 @@ export const db = mysql({
 
 // console.log( mysql_db.connect );
 export async function sql_query(query_string, values = []){
-    try{
-        const results = await db.query(query_string, values)
-        await db.end()
-        return results
-    } catch (e){
-      console.log("mpika")
-        throw Error(e.message);
-    }
+  try{
+    // console.log(query_string);
+    // console.log(values);
+    const results = await db.query(query_string, values)
+    await db.end()
+    return results
+  } catch (e){
+    console.log("SQL Query was not successful!!.")
+    throw Error(e.message);
+  }
 }
