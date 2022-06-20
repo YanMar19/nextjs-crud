@@ -1,4 +1,4 @@
-const fs = require('fs');
+// const fs = require('fs');
 
 let users = require('data/users.json');
 
@@ -68,6 +68,6 @@ function _delete(id) {
 
 // private helper functions
 
-function saveData() {
-    fs.writeFileSync('data/users.json', JSON.stringify(users, null, 4));
-}
+// function saveData() {
+//     fs.writeFileSync('data/users.json', JSON.stringify(users, null, 4));
+// }

@@ -51,6 +51,7 @@ export async function sql_query(query_string, values = []){
         await db.end()
         return results
     } catch (e){
+      console.log("mpika")
         throw Error(e.message);
     }
 }
