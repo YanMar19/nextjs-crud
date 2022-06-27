@@ -2,7 +2,7 @@
 import { sql_query } from '../../../helpers/db.js';
 
 const handler = async (req, res) => {
-    console.log(req.body);
+    // console.log(req.body);
     switch (req.method) {
         case 'GET':
             console.log("GET");

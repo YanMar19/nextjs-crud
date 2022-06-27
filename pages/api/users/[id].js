@@ -1,6 +1,5 @@
 import { sql_query } from '../../../helpers/db.js';
 
-
 export default handler;
 
 function handler(req, res) {
@@ -8,8 +7,6 @@ function handler(req, res) {
         case 'GET':
             return getUserById();
         case 'PUT':
-            return updateUser();
-        case 'PATCH':
             return updateUser();
         case 'DELETE':
             return deleteUser();
@@ -27,8 +24,10 @@ function handler(req, res) {
         `;
         console.log(`my_sql_q: ${my_sql_q}`);
         try {
-            await sql_query(my_sql_q);
-            return res.status(200).json({});
+            const results = await sql_query(my_sql_q);
+            const resultArray = results[0];
+            // console.log(resultArray);
+            return res.status(200).json(resultArray);
         } catch (error) {
             return res.status(400).send({message: `User with id: ${user_id} does not exist.`});
         }
@@ -38,9 +37,9 @@ function handler(req, res) {
         console.log("updateByID");
         const user_id = req.query.id;
         
-        console.log(`user_id: ${user_id}`);
+        // console.log(`user_id: ${user_id}`);
         const body = req.body;
-        console.log(`id: ${body.id}`);
+        // console.log(`id: ${body.id}`);
         const my_sql_q = `
         UPDATE Users
         SET Users.title = "${body.title}",

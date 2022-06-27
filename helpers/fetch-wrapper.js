@@ -23,7 +23,7 @@ function post(url, body) {
 
 function put(url, body) {
     const requestOptions = {
-        method: 'PATCH',
+        method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body)
     };
