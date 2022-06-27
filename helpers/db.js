@@ -49,11 +49,12 @@ export async function sql_query(query_string, values = []){
   try{
     // console.log(query_string);
     // console.log(values);
-    const results = await db.query(query_string, values)
-    await db.end()
-    return results
+    const results = await db.query(query_string, values);
+    await db.end();
+    console.log("SQL Query was successful!!.");
+    return results;
   } catch (e){
-    console.log("SQL Query was not successful!!.")
+    console.log("SQL Query was NOT successful!!.");
     throw Error(e.message);
   }
 }

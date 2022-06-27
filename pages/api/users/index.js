@@ -97,3 +97,4 @@ export default handler;
 
 
 // CREATE TABLE `dbwm5gkvx0exp2`.`Users` ( `id` INT NOT NULL AUTO_INCREMENT , `title` VARCHAR(256) NULL , `firstName` VARCHAR(256) NULL , `lastName` VARCHAR(256) NULL , `email` VARCHAR(256) NOT NULL , `role` VARCHAR(256) NULL , `password` VARCHAR(256) NULL , `dateCreated` VARCHAR(256) NULL , `dateUpdated` VARCHAR(256) NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
