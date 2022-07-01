@@ -9,7 +9,7 @@ function App({ Component, pageProps }) {
     return (
         <>
             <Head>
-                <title>Next.js 10 - CRUD Example with React Hook Form</title>
+                <title>Next.js 10 - CRUD Example with React Hookqweqw Form</title>
 
                 {/* bootstrap css */}
                 <link href="//netdna.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />

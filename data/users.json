@@ -5,6 +5,7 @@
         "lastName": "Murphy1",
         "email": "frank.murphy@rustvale.com",
         "role": "User",
+        "username": "a",
         "password": "sue123",
         "id": 1,
         "dateCreated": "2021-04-08T05:33:05.184Z",
@@ -13,6 +14,7 @@
     {
         "title": "Mr",
         "firstName": "Γιαννης",
+        "username": "b",
         "lastName": "Μαριανος",
         "email": "info@webproposal.eu",
         "role": "Admin",
