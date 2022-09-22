@@ -26,7 +26,7 @@ function AddEdit(props) {
         email: Yup.string()
             .email('Email is invalid')
             .required('Email is required'),
-        role: Yup.string()
+        user_role: Yup.string()
             .required('Role is required'),
         password: Yup.string()
             .transform(x => x === '' ? undefined : x)
@@ -109,12 +109,12 @@ function AddEdit(props) {
                 </div>
                 <div className="form-group col">
                     <label>Role</label>
-                    <select name="role" {...register('role')} className={`form-control ${errors.role ? 'is-invalid' : ''}`}>
+                    <select name="Role" {...register('Role')} className={`form-control ${errors.Role ? 'is-invalid' : ''}`}>
                         <option value=""></option>
                         <option value="User">User</option>
                         <option value="Admin">Admin</option>
                     </select>
-                    <div className="invalid-feedback">{errors.role?.message}</div>
+                    <div className="invalid-feedback">{errors.Role?.message}</div>
                 </div>
             </div>
             {!isAddMode &&

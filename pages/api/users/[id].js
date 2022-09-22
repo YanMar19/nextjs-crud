@@ -46,7 +46,7 @@ function handler(req, res) {
         Users.firstName = "${body.firstName}",
         Users.lastName = "${body.lastName}",
         Users.email = "${body.email}",
-        Users.role = "${body.role}",
+        Users.user_role = "${body.user_role}",
         Users.dateUpdated = NOW()
         WHERE Users.id = ${user_id}
         `;

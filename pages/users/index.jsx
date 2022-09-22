@@ -37,10 +37,10 @@ function Index() {
                 </thead>
                 <tbody>
                     {users && users.map(user =>
-                        <tr key={user.id}>
+                        <tr key={user.email}>
                             <td>{user.title} {user.firstName} {user.lastName}</td>
                             <td>{user.email}</td>
-                            <td>{user.role}</td>
+                            <td>{user.user_role}</td>
                             <td style={{ whiteSpace: 'nowrap' }}>
                                 <Link href={`/users/edit/${user.id}`} className="btn btn-sm btn-primary mr-1">Edit</Link>
                                 <button onClick={() => deleteUser(user.id)} className="btn btn-sm btn-danger btn-delete-user" disabled={user.isDeleting}>

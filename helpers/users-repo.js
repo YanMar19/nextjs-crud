@@ -18,8 +18,8 @@ function getById(id) {
     return users.find(x => x.id.toString() === id.toString());
 }
 
-function create({ title, firstName, lastName, email, role, password }) {
-    const user = { title, firstName, lastName, email, role, password };
+function create({ title, firstName, lastName, email, user_role, password }) {
+    const user = { title, firstName, lastName, email, user_role, password };
 
     // validate
     if (users.find(x => x.email === user.email))
@@ -37,8 +37,8 @@ function create({ title, firstName, lastName, email, role, password }) {
     saveData();
 }
 
-function update(id, { title, firstName, lastName, email, role, password }) {
-    const params = { title, firstName, lastName, email, role, password };
+function update(id, { title, firstName, lastName, email, user_role, password }) {
+    const params = { title, firstName, lastName, email, user_role, password };
     const user = users.find(x => x.id.toString() === id.toString());
 
     // validate

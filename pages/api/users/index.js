@@ -34,12 +34,12 @@ const handler = async (req, res) => {
                 }
                 
                 const my_sql_q2 = `
-                insert INTO Users (title, firstName, lastName, email, role, password, dateCreated, dateUpdated)
+                insert INTO Users (title, firstName, lastName, email, user_role, password, dateCreated, dateUpdated)
                 VALUES ( "${body.title}",
                     "${body.firstName}",
                     "${body.lastName}",
                     "${body.email}",
-                    "${body.role}",
+                    "${body.user_role}",
                     "${body.password}",
                     NOW(), 
                     NOW())
@@ -96,5 +96,5 @@ export default handler;
 // eof
 
 
-// CREATE TABLE `dbwm5gkvx0exp2`.`Users` ( `id` INT NOT NULL AUTO_INCREMENT , `title` VARCHAR(256) NULL , `firstName` VARCHAR(256) NULL , `lastName` VARCHAR(256) NULL , `email` VARCHAR(256) NOT NULL , `role` VARCHAR(256) NULL , `password` VARCHAR(256) NULL , `dateCreated` VARCHAR(256) NULL , `dateUpdated` VARCHAR(256) NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+// CREATE TABLE `dbwm5gkvx0exp2`.`Users` ( `id` INT NOT NULL AUTO_INCREMENT , `title` VARCHAR(256) NULL , `firstName` VARCHAR(256) NULL , `lastName` VARCHAR(256) NULL , `email` VARCHAR(256) NOT NULL , `user_role` VARCHAR(256) NULL , `password` VARCHAR(256) NULL , `dateCreated` VARCHAR(256) NULL , `dateUpdated` VARCHAR(256) NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
 

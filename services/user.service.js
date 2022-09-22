@@ -18,21 +18,54 @@ export const userService = {
     delete: _delete
 };
 
-const baseUrl = `${apiUrl}/users`;
+const baseUrl = `https://axuwcws74g.execute-api.eu-central-1.amazonaws.com`;
 
 async function getAll() {
-    return fetchWrapper.get(baseUrl);
-    // const res = await fetch(`${apiUrl}/users`);
-    // const users = await res.json();
-    // return users;
+    // return fetchWrapper.get(baseUrl);
+    // const response = await fetch(`https://axuwcws74g.execute-api.eu-central-1.amazonaws.com/users`);
+    const response = await fetch(`${baseUrl}/users`, {
+        // mode: 'cors',
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+    const users = await response.json();
+    console.log(users);
+    // const jsonara = 
+    //     [
+    //         {
+    //             "password": "12312",
+    //             "lastName": "last",
+    //             "email": "nikos2@gmail.com",
+    //             "role": "User",
+    //             "firstName": "Nikos12345",
+    //             "title": "Mr",
+    //             "id": 1
+    //         }
+    //     ]
+    
+    // console.log(jsonara);
+    return users;
 }
 
 function getById(id) {
     return fetchWrapper.get(`${baseUrl}/${id}`);
 }
 
-function create(params) {
-    return fetchWrapper.post(baseUrl, params);
+async function create(params) {
+    // return fetchWrapper.post(baseUrl, params);
+
+    const response = await fetch(`${baseUrl}/users/signup`, {
+        // mode: 'cors',
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(params),
+      });
+    const resp = await response.json();
+    console.log(resp);
+    return resp;
 }
 
 function update(id, params) {
